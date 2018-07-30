@@ -25,7 +25,7 @@ export class AppComponent {
           ]
       }
       this._demoService.getSalesData().subscribe(
-              salesData => { this.data.datasets[1].data = salesData.data},
+              salesData => { console.log(salesData); this.data.datasets[1].data = salesData.data},
               err => console.error(err),
               () => console.log('done loading sales')
             );
