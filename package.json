@@ -2,13 +2,13 @@
   "name": "ramen-sales",
   "version": "0.0.1",
   "scripts": {
-    "ng": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng",
-    "start": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng serve",
-    "build": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng build --prod",
-    "test": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng test",
-    "lint": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng lint",
-    "e2e": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng e2e",
-    "postinstall": "/opt/nodejs/8.11.2/bin/node/node_modules/@angular/cli/bin/ng build --prod"
+    "ng": "./node_modules/@angular/cli/bin/ng",
+    "start": "./node_modules/@angular/cli/bin/ng serve",
+    "build": "./node_modules/@angular/cli/bin/ng build --prod",
+    "test": "./node_modules/@angular/cli/bin/ng test",
+    "lint": "./node_modules/@angular/cli/bin/ng lint",
+    "e2e": "./node_modules/@angular/cli/bin/ng e2e",
+    "postinstall": "./node_modules/@angular/cli/bin/ng build --prod"
   },
   "private": true,
   "dependencies": {
