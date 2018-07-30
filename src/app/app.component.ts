@@ -10,20 +10,20 @@ import { DemoServiceService } from './demo-service.service';
 export class AppComponent {
   title = 'ramenSales';
 
-  data: any;
+  data: any = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+        {
+            label: '# of plates served',
+            backgroundColor: '#42A5F5',
+            borderColor: '#1E88E5',
+            data: [0,0,0,0,0,0,0]
+        }
+    ]
+};
 
   constructor(private _demoService: DemoServiceService) {
-    this.data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [
-            {
-                label: '# of plates served',
-                backgroundColor: '#42A5F5',
-                borderColor: '#1E88E5',
-                data: [0,0,0,0,0,0,0]
-            }
-        ]
-    }
+    
       this._demoService.getSalesData().subscribe(
               salesData => { 
                 let ramenSales = this.data.datasets[1].data = salesData.data
