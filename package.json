@@ -2,12 +2,12 @@
   "name": "ramen-sales",
   "version": "0.0.0",
   "scripts": {
-    "ng": "node",
-    "start": "node serve",
-    "build": "node build --prod",
-    "test": "node test",
-    "lint": "node lint",
-    "e2e": "node e2e"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
