@@ -26,7 +26,7 @@ export class AppComponent {
     
       this._demoService.getSalesData().subscribe(
               salesData => { 
-                let ramenSales = this.data.datasets[1].data = salesData.data
+                let ramenSales = salesData.data
                 console.log(ramenSales);
                 this.data = {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
