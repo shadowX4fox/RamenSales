@@ -116,6 +116,7 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE/angular.json" ]; then
   cd "$DEPLOYMENT_SOURCE"
   echo "Running $NPM_CMD run build"
+  eval $NPM_CMD run build
   exitWithMessageOnError "angular build failed"
   cd - > /dev/null
 fi
