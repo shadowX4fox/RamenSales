@@ -104,8 +104,8 @@ echo Handling node.js deployment.
 selectNodeVersion
 
 # 3. Install npm packages
-if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
+if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then
+  cd "$DEPLOYMENT_SOURCE"
   echo "Running $NPM_CMD install --production"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
@@ -113,8 +113,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 fi
 
 # 4. Angular Prod Build
-if [ -e "$DEPLOYMENT_TARGET/angular.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
+if [ -e "$DEPLOYMENT_SOURCE/angular.json" ]; then
+  cd "$DEPLOYMENT_SOURCE"
   echo "Running $NPM_CMD run build"
   exitWithMessageOnError "angular build failed"
   cd - > /dev/null
