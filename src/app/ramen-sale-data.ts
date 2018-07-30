@@ -1,3 +1,3 @@
 export class RamenSaleData {
-    data: number[]
+    data: string[]
 }
