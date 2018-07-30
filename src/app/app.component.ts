@@ -13,19 +13,24 @@ export class AppComponent {
   data: any;
 
   constructor(private _demoService: DemoServiceService) {
-      this.data = {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          datasets: [
-              {
-                  label: '# of plates served',
-                  backgroundColor: '#42A5F5',
-                  borderColor: '#1E88E5',
-                  data: []
-              }
-          ]
-      }
+      
       this._demoService.getSalesData().subscribe(
-              salesData => { console.log(salesData); this.data.datasets[1].data = salesData.data},
+              salesData => { 
+                let ramenSales = this.data.datasets[1].data = salesData.data
+                console.log(ramenSales);
+                this.data = {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [
+                        {
+                            label: '# of plates served',
+                            backgroundColor: '#42A5F5',
+                            borderColor: '#1E88E5',
+                            data: ramenSales
+                        }
+                    ]
+                }
+                console.log(this.data);
+              },
               err => console.error(err),
               () => console.log('done loading sales')
             );
