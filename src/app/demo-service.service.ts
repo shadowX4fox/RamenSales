@@ -13,6 +13,6 @@ export class DemoServiceService {
  
     // Uses http.get() to load data from a single API endpoint
     getSalesData() {
-        return this.http.get<RamenSaleData>('http://salesdatafunction.azurewebsites.net/api/FunctionBarCharData?id=ramen::sales');
+        return this.http.get<RamenSaleData>('https://salesdatafunction.azurewebsites.net/api/FunctionBarCharData?id=ramen::sales');
     }
 }
