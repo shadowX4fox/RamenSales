@@ -4,6 +4,7 @@ import {ChartModule} from 'primeng/chart';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { DemoServiceService } from './demo-service.service';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { DemoServiceService } from './demo-service.service';
   imports: [
     BrowserModule,
     ChartModule,
+    ButtonModule,
     HttpClientModule
   ],
   providers: [DemoServiceService],

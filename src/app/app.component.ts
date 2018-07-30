@@ -46,4 +46,27 @@ export class AppComponent {
             );
 
   }
+
+  handleClick() {
+    this._demoService.getSalesData().subscribe(
+        salesData => { 
+          let ramenSales = salesData.data
+          console.log(ramenSales);
+          this.data = {
+              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+              datasets: [
+                  {
+                      label: '# of plates served',
+                      backgroundColor: '#42A5F5',
+                      borderColor: '#1E88E5',
+                      data: ramenSales
+                  }
+              ]
+          }
+          console.log(this.data);
+        },
+        err => console.error(err),
+        () => console.log('done loading sales')
+      );
+  }
 }
