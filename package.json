@@ -7,8 +7,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "/opt/nodejs/8.11.2/lib/node_modules/npm/bin/npm run build"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
