@@ -104,22 +104,22 @@ echo Handling node.js deployment.
 selectNodeVersion
 
 # 3. Install npm packages
-if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then
-  cd "$DEPLOYMENT_SOURCE"
-  echo "Running $NPM_CMD install --production"
-  eval $NPM_CMD install --production
-  exitWithMessageOnError "npm failed"
-  cd - > /dev/null
-fi
+#if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then
+#  cd "$DEPLOYMENT_SOURCE"
+#  echo "Running $NPM_CMD install --production"
+#  eval $NPM_CMD install --production
+#  exitWithMessageOnError "npm failed"
+#  cd - > /dev/null
+#fi
 
 # 4. Angular Prod Build
-if [ -e "$DEPLOYMENT_SOURCE/angular.json" ]; then
-  cd "$DEPLOYMENT_SOURCE"
-  echo "Running $NPM_CMD run build"
-  eval ./node_modules/.bin/ng build --prod
-  exitWithMessageOnError "angular build failed"
-  cd - > /dev/null
-fi
+#if [ -e "$DEPLOYMENT_SOURCE/angular.json" ]; then
+#  cd "$DEPLOYMENT_SOURCE"
+#  echo "Running $NPM_CMD run build"
+#  eval ./node_modules/.bin/ng build --prod
+#  exitWithMessageOnError "angular build failed"
+#  cd - > /dev/null
+#fi
 
 # 1. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
